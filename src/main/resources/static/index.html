@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Remebr</title>
+</head>
+<body>
+<script src="index.js"></script>
+<script src="authentication.js" defer></script>
+
+<div class="topnav" id="myTopnav">
+    <a href=""></a>
+    <a><div class="flex-container-search">
+        <input  tabindex="0" name="search" class="inputField" type="search" id="search-id" aria-label="Naam" placeholder="Naam">
+        <button class="search-button" type="submit">Zoek</button></div></a>
+    <a class="login" href="#login" onclick="openLoginForm()">Inloggen</a>
+    <a class="register" href="#Registreren" onclick="openRegisterForm()">Registreren</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+    </a>
+</div>
+
+
+<main class="main-area" id="container"></main>
+
+<div class="form-popup" id="loginFormId">
+    <form  class="form-container">
+        <h1>Login</h1>
+        <input type="text" placeholder="Email" name="email" id="nameId" aria-label="email" required/>
+        <input type="password" placeholder="Password" name="password" src="passwordId" aria-label="password" required/>
+        <button type="submit" class="btn" value="Login" > Sign in </button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    </form>
+</div>
+
+<div class="form-popup" id="registrationFormId">
+    <form  class="form-container">
+        <h1>register</h1>
+        <input type="text" placeholder="User name" name="username" id="usernameId" aria-label="name" required/>
+        <input type="text" placeholder="Email" name="email" id="emailId" aria-label="email" required/>
+        <input type="password" placeholder="Password" name="password" id="passwordId" aria-label="password" required/>
+        <input type="text" placeholder="Firstname" name="firstname" id="firstnameId" aria-label="firstname" required/>
+        <input type="text" placeholder="Lastname" name="lastname" id="lastnameId" aria-label="lastname" required/>
+        <input type="text" placeholder="Role" name="role" id="roleId" aria-label="role" required/>
+        <button type="submit" class="btn" id="registrationformsubmit" value="Sign Up" > Sign Up </button>
+        <button type="button" class="btn cancel" onclick="closeRegisterForm()">Close</button>
+    </form>
+</div>
+
+</body>
+</html>

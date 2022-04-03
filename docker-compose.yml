@@ -1,0 +1,29 @@
+#database:
+#  image: mysql:5.7
+#  ports:
+#    - "33061:3306"
+#  command: --init-file /data/application/init.sql
+#  volumes:
+#    - ./init.sql:/data/application/init.sql
+#  environment:
+#    MYSQL_ROOT_USER: remembr
+#    MYSQL_ROOT_PASSWORD: remembr
+#    MYSQL_DATABASE: remembr
+#    MYSQL_USER: remembr
+#    MYSQL_PASSWORD: remembr
+
+
+version: "3.7"
+services:
+  db:
+    build: development/db
+    ports:
+      - "25432:5432"
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin
+      - DB_APP_NAME=remembr
+      - DB_APP_USER=remembr
+      - DB_APP_PASS=remembr
+    volumes:
+      - "./data:/var/data/db"
